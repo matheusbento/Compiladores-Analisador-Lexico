@@ -25,27 +25,52 @@ int main()
             }
 				printf("<RELOP,%s>", d );
 				break;
-			case IF:
-				printf("<IF>");
+			case OC:
+				printf("<OPEN_C>");
 				break;
-			case THEN:
-				printf("<THEN>");
-				break;
-			case ELSE:
-				printf("<ELSE>");
+			case CC:
+				printf("<CLOSE_C>");
 				break;
 			case NUMBER:
 				printf("<NUMBER,%s>", yytext);
 				break;
-			case ID:
-				printf("<ID,%s>", yytext);
+			case VAR:
+				printf("<VAR,%s>", yytext);
 				break;
-         case OP:
-   				printf("<OP>");
-   				break;
-         case CL:
-               printf("<CL>");
-               break;
+    	case OP:
+   			printf("<OP>");
+   			break;
+			case CP:
+	   		printf("<CP>");
+	   		break;
+      case ENDL:
+        printf("<FINAL>");
+      	break;
+			case OUT:
+				printf("<SAIDA>");
+				break;
+			case IN:
+				printf("<IN>");
+				break;
+			case STRING:
+				printf("<STRING,%s>", yytext);
+				break;
+			case NUMBERFL:
+				printf("<NUMBERFL,%s>", yytext);
+				break;
+			case SOMA:
+				printf("<SOMA>");
+				break;
+			case MENOS:
+				printf("<MENOS>");
+				break;
+			case DIV:
+				printf("<DIV>");
+				break;
+			case MULT:
+				printf("<MULT>");
+				break;
+
 		}
       printf("\n");
 		ntoken = yylex();
