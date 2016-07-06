@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tokens.h"
-
-extern int yylex();
-extern int relop_att;
-extern int nline;
-extern char* yytext;
+#include "lex.yy.c"
 
 int main()
 {
